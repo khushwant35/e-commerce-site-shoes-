@@ -1,0 +1,688 @@
+
+
+
+
+
+<?php
+session_start();
+include("connect.php");
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike - Just Do It</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="image/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <section>
+        <nav>
+            <div class="logo">
+                <h1>Shoe<span>s</span></h1>
+            </div>
+
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#Products">Products</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Review">Review</a></li>
+                <li><a href="http://localhost/login/">login</a></li>
+                <li><a href="http://localhost/login/">Logout</a></li>
+            </ul>
+
+            <div class="icons">
+                
+                <i class="fa-solid fa-heart"></i>
+               
+                <a href="./cart.html"> <i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="http://127.0.0.1:5500/login%20page/index.html">
+                <i class="fa-solid fa-user"> </i></a>
+                
+                   
+                
+               
+            </div>
+
+        </nav>
+
+        <div class="main" id="Home">
+            <div class="main_content">
+                <div class="main_text">
+                    <h1>NIKE<br><span>Collection</span></h1>
+                    <p>
+                        Welcome to the ultimate destination for Nike footwear. Step into style and performance with our curated collection. 
+                        Discover the power of Nike shoes at your fingertips—crafted for every stride and style,
+                         designed to elevate your game. Unleash your potential with our exclusive Nike shoe collection,
+                          where innovation meets comfort and style. Elevate your look with iconic kicks that inspire greatness.
+                           Your journey begins here, exploring a handpicked selection of the latest Nike styles.
+                            Step up your shoe game with us and embrace the essence of Nike innovation.
+                         Dive into a world of possibilities with Nike
+                    </p>
+                </div>
+                <div class="main_image">
+                    <img src="image/shoes.png">
+                </div>
+            </div>
+            <div class="social_icon">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"> </i>
+                <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+            <div class="button">
+                <a href="#">SHOP NOW</a>
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!--Products-->
+
+    <div class="products" id="Products">
+        <h1>Products</h1>
+
+        <div class="box">
+            <div class="card" data-id="1" data-name="Nike Streakfly" data-price="100.99" data-image="image/shoes1.png">
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-share"></i>
+                </div>
+                <div class="image">
+                    <img src="image/shoes1.png">
+                </div>
+                <div class="products_text">
+                    <h2>Nike Streakfly</h2>
+                    <p>Road racing shoe</p>
+                    <h3>$100.99</h3>
+                    <div class="products_star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <a href="#" class="btn" onclick="addToCart(this)">Add To Cart</a>
+                </div>
+            </div>
+
+            <div class="card" data-id="2" data-name="Nike G.T. Jump 2" data-price="200.99" data-image="image/shoes2.png">
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-share"></i>
+                </div>
+
+                <div class="image">
+                    <img src="image/shoes2.png">
+                </div>
+
+                <div class="products_text">
+                    <h2>Nike G.T. Jump 2 </h2>
+                    <p>
+                      Shaedon-like springiness
+                    </p>
+                    <h3>$200.99</h3>
+                    <div class="products_star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="#" class="btn"onclick="addToCart(this)">Add To Cart</a>
+                </div>
+
+            </div>
+
+            <div class="card" data-id="3" data-name="Nike Vaporfly 3" data-price="175.99" data-image="image/shoes3.png">
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-share"></i>
+                </div>
+
+                <div class="image">
+                    <img src="image/shoes3.png">
+                </div>
+
+                <div class="products_text">
+                    <h2>Nike Vaporfly 3</h2>
+                    <p>
+                        Men's Road Racing Shoes
+                    </p>
+                    <h3>$175.99</h3>
+                    <div class="products_star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <a href="#" class="btn"onclick="addToCart(this)">Add To Cart</a>
+                </div>
+
+            </div>
+
+            <div class="card"data-id="4" data-name="Nike Zoom Fly 5" data-price="120.99" data-image="image/shoes4.png">
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-share"></i>
+                </div>
+
+                <div class="image">
+                    <img src="image/shoes4.png">
+                </div>
+
+                <div class="products_text">
+                    <h2>Nike Zoom Fly 5</h2>
+                    <p>
+                        Women's Road Running Shoes
+                    </p>
+                    <h3>$120.99</h3>
+                    <div class="products_star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <a href="#" class="btn"onclick="addToCart(this)">Add To Cart</a>
+                </div>
+
+            </div>
+
+            <div class="card"data-id="5" data-name="NikeCourt Lite 4" data-price="150.99" data-image="image/shoes5.png">
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-share"></i>
+                </div>
+
+                <div class="image">
+                    <img src="image/shoes5.png">
+                </div>
+
+                <div class="products_text">
+                    <h2>NikeCourt Lite 4</h2>
+                    <p>
+                        Women's Tennis Shoes
+                    </p>
+                    <h3>$150.99</h3>
+                    <div class="products_star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <a href="#" class="btn"onclick="addToCart(this)">Add To Cart</a>
+                </div>
+
+            </div>
+
+            <div class="card"data-id="6" data-name="Nike Infinity G NN" data-price="220.99" data-image="image/shoes6.png">
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-share"></i>
+                </div>
+
+                <div class="image">
+                    <img src="image/shoes6.png">
+                </div>
+
+                <div class="products_text">
+                    <h2>Nike Infinity G NN</h2>
+                    <p>
+                        Golf Shoes (Wide)
+                    </p>
+                    <h3>$220.99</h3>
+                    <div class="products_star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                    </div>
+                    <a href="#" class="btn"onclick="addToCart(this)">Add To Cart</a>
+                </div>
+
+            </div>
+
+            <div class="card"data-id="7" data-name="Nike Zoom GP Challenge 1" data-price="110.99" data-image="image/shoes.png">
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-share"></i>
+                </div>
+
+                <div class="image">
+                    <img src="image/shoes.png">
+                </div>
+
+                <div class="products_text">
+                    <h2>Nike Zoom GP Challenge 1</h2>
+                    <p>
+                        Men's Hard Court Tennis Shoes
+                    </p>
+                    <h3>$110.99</h3>
+                    <div class="products_star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <a href="#" class="btn"onclick="addToCart(this)">Add To Cart</a>
+                </div>
+
+            </div>
+
+            <div class="card"data-id="8" data-name="NIKE Luka 2" data-price="150.99" data-image="image/shoes7.png">
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-share"></i>
+                </div>
+
+                <div class="image">
+                    <img src="image/shoes7.png">
+                </div>
+
+                <div class="products_text">
+                    <h2>NIKE Luka 2</h2>
+                    <p>
+                        Luka Dončić's signature shoe
+                    </p>
+                    <h3>$150.99</h3>
+                    <div class="products_star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                    </div>
+                    <a href="#" class="btn"onclick="addToCart(this)">Add To Cart</a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!--About-->
+
+    <div class="about" id="About">
+        
+        <h1>Nike G.T.<span>Hustle 2 EP</span></h1>
+
+        <div class="about_main">
+            <div class="about_image">
+                <div class="about_small_image">
+                    <img src="image/red_shoes1.png" onclick="functio(this)">
+                    <img src="image/red_shoes2.png" onclick="functio(this)">
+                    <img src="image/red_shoes3.png" onclick="functio(this)">
+                    <img src="image/red_shoes4.png" onclick="functio(this)">
+                </div>
+
+                <div class="image_contaner">
+                    <img src="image/red_shoes1.png" id="imagebox">
+                </div>
+
+            </div>
+
+            <div class="about_text">
+                <p>
+                    One step can make all the difference when it's game point, like a sneaky successful back-door 
+                    layup that's blocked if not for a sliver of separation, or a last-second leap at your opponent that 
+                    sends their 3 clanking off the rim. We used insights from female athletes to make the G.T. Hustle 2 soft,
+                     supportive and lightweight—which every basketball player needs. Loaded with cushioning in the core and Zoom Air,
+                      this shoe helps you stay moving forwards—from check-up to "that's game". Sprint, stop and score from end to end,
+                       focusing on dominating, not deteriorating, down the stretch. With its extra-durable rubber outsole, 
+                       this version gives you traction for outdoor courts.
+        
+                </p>
+            </div>
+
+        </div>
+
+        <a href="#" class="about_btn">Shop Now</a>
+
+        <script>
+            function functio(small){
+                var full = document.getElementById("imagebox")
+                full.src = small.src
+            }
+        </script>
+        
+    </div>
+
+
+
+    <!--Review-->
+
+    <div class="review" id="Review">
+        <h1>Customer's<span>review</span></h1>
+        
+        <div class="review_box">
+            <div class="review_card">
+                <div class="card_top">
+                    <div class="profile">
+
+                        <div class="profile_image">
+                            <img src="image/girl_dp1.jpg">
+                        </div>
+
+                        <div class="name">
+                            <strong>Ranidi Lochana</strong>
+
+                            <div class="like">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="comment">
+                    <p>
+                        As an avid runner, I recently had the pleasure of trying out the Nike Air Zoom Pegasus 38, and I must say, it exceeded all my expectations. This latest iteration of Nike's iconic Pegasus line combines comfort, support, and style like never before.
+                    </p>
+                </div>
+            </div>   
+
+            <div class="review_card">
+                <div class="card_top">
+                    <div class="profile">
+
+                        <div class="profile_image">
+                            <img src="image/man_dp1.jpg">
+                        </div>
+
+                        <div class="name">
+                            <strong>Sayuru Tharanga</strong>
+
+                            <div class="like">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="comment">
+                    <p>
+                        First off, let's talk about comfort. The Pegasus 38 features Nike's responsive Zoom Air units in the forefoot, providing a cushioned and springy feel with every stride. Whether I was doing long-distance runs or quick sprints,
+                    </p>
+                </div>
+            </div>   
+
+            <div class="review_card">
+                <div class="card_top">
+                    <div class="profile">
+
+                        <div class="profile_image">
+                            <img src="image/man_dp2.jpg">
+                        </div>
+
+                        <div class="name">
+                            <strong>Senuda Dilwan</strong>
+
+                            <div class="like">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="comment">
+                    <p>
+                        The upper of the shoe is where the Pegasus 38 truly shines. It's made with engineered mesh that offers a snug yet breathable fit. I appreciated how well the shoe hugged my foot without feeling restrictive, allowing for natural movement and ventilation during my runs
+                    </p>
+                </div>
+            </div>   
+
+        </div>
+
+        <div class="review_box">
+            <div class="review_card">
+                <div class="card_top">
+                    <div class="profile">
+
+                        <div class="profile_image">
+                            <img src="image/gir_dp3.jpg">
+                        </div>
+
+                        <div class="name">
+                            <strong>Kaveesha Vidurangi</strong>
+
+                            <div class="like">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="comment">
+                    <p>
+                        The shoe provides reliable traction, thanks to its durable rubber outsole with a waffle-inspired tread pattern. I felt confident running on various surfaces, from roads to trails, knowing that the shoe would grip securely with each step.
+                    </p>
+                </div>
+            </div>   
+
+            <div class="review_card">
+                <div class="card_top">
+                    <div class="profile">
+
+                        <div class="profile_image">
+                            <img src="image/gir_dp2.jpg">
+                        </div>
+
+                        <div class="name">
+                            <strong>John Deo</strong>
+
+                            <div class="like">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="comment">
+                    <p>
+                        Whether you're a seasoned runner or just starting out, this shoe is suitable for a wide range of runners. It strikes a perfect balance between cushioning and responsiveness, making it ideal for daily training runs, speed workouts, 
+                    </p>
+                </div>
+            </div>   
+
+            <div class="review_card">
+                <div class="card_top">
+                    <div class="profile">
+
+                        <div class="profile_image">
+                            <img src="image/man_dp3.jpg">
+                        </div>
+
+                        <div class="name">
+                            <strong>Charith Aruna</strong>
+
+                            <div class="like">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="comment">
+                    <p>
+                        Overall, the Nike Air Zoom Pegasus 38 is a fantastic choice for runners seeking a dependable and comfortable shoe. With its innovative features, excellent fit, and stylish appearance, it's no wonder 
+                    </p>
+                </div>
+            </div>   
+
+        </div>
+
+    </div>
+
+
+    <!--Services-->
+
+    <div class="services" id="Servises">
+        <h1>our<span>services</span></h1>
+
+        <div class="services_cards">
+            <div class="services_box">
+                <i class="fa-solid fa-truck-fast"></i>
+                <h3>Fast Delivery</h3>
+                <p>
+                    Experience lightning-fast delivery to your doorstep!
+                </p>
+            </div>
+
+            <div class="services_box">
+                <i class="fa-solid fa-rotate-left"></i>
+                <h3>10 Days Replacement</h3>
+                <p>
+                    Enjoy peace of mind with our hassle-free 10-day replacement guarantee!
+                </p>
+            </div>
+
+            <div class="services_box">
+                <i class="fa-solid fa-headset"></i>
+                <h3>24 x 7 Support</h3>
+                <p>
+                    Get round-the-clock support whenever you need it with our 24/7 customer service!
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+
+
+   
+    
+    
+
+    <!--Footer-->
+
+    <footer>
+        <div class="footer_main">
+            <div class="tag">
+                <h1>Contact</h1>
+                <a href="#"><i class="fa-solid fa-house"></i>hazaribag/jharkhand/india</a>
+                <a href="#"><i class="fa-solid fa-phone"></i>+94 12 345 6789</a>
+                <a href="#"><i class="fa-solid fa-envelope"></i>khushwantkumar2441@gmail.com</a>
+            </div>
+
+            <div class="tag">
+                <h1>Get Help</h1>
+                <a href="https://www.nike.com/in/help" class="center">FAQ</a>
+                <a href="https://www.nike.com/in/orders/details/" class="center">Shipping</a>
+                <a href="https://www.nike.com/help/a/how-to-return" class="center">Returns</a>
+                <a href="8825321076-2@ibl" class="center">Payment Options</a>
+            </div>
+
+            <div class="tag">
+                <h1>Our Stores</h1>
+                <a href="https://www.nike.com/retail/s/nike-mall-of-the-emirates" class="center">UAE</a>
+                <a href="https://www.nike.com/retail/directory/united-states/california" class="center">USA</a>
+                <a href="https://www.nike.com/retail/directory/india/karnataka" class="center">India</a>
+                <a href="https://www.nike.com/retail/directory/japan/%E6%9D%B1%E4%BA%AC%E9%83%BD" class="center">Japan</a>
+            </div>
+
+            <div class="tag">
+                <h1>Follw Us</h1>
+                <div class="social_link">
+                    <a href="https://www.facebook.com/nike"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://x.com/Nike?s=09"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/nike?igsh=NnhqNTg0dHhkZDVv"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/nike/"><i class="fa-brands fa-linkedin-in"></i></a>                    
+                </div>
+            </div>
+
+            <div class="tag">
+                <h1>Newsletter</h1>
+                <div class="search_bar">
+                    <input type="text" placeholder="You email id here">
+                    <button type="submit">Subscribe</button>
+                </div>
+            </div>
+            
+
+        </div>
+    </footer>
+<script>
+    function addToCart(element) {
+        // Get product details from the card element
+        const card = element.closest('.card');
+        const productId = card.getAttribute('data-id');
+        const productName = card.getAttribute('data-name');
+        const productPrice = card.getAttribute('data-price');
+        const productImage = card.getAttribute('data-image');
+
+        // Create product object
+        const product = {
+            id: productId,
+            name: productName,
+            price: productPrice,
+            image: productImage,
+            quantity: 1
+        };
+
+        // Get cart items from local storage
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        // Check if product already exists in cart
+        const existingProductIndex = cart.findIndex(item => item.id === productId);
+        if (existingProductIndex > -1) {
+            // If product exists, update quantity
+            cart[existingProductIndex].quantity += 1;
+        } else {
+            // If product doesn't exist, add to cart
+            cart.push(product);
+        }
+
+        // Save updated cart to local storage
+        localStorage.setItem('cart', JSON.stringify(cart));
+        
+        alert(productName + ' added to cart');
+    }
+</script>
+
+    
+</body>
+</html>
